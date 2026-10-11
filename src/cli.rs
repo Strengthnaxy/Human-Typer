@@ -15,12 +15,12 @@ pub fn choose_editor() -> String {
     io::stdin().read_line(&mut input).unwrap();
     let choice = input.trim();
 
-    let editor = match choice {
-        "1" => "vim",
-        "2" => "nvim",
-        "3" => "nano",
-        "4" => "emacs",
-        "5" => "kate",
+    let editor: String = match choice {
+        "1" => "vim".to_string(),
+        "2" => "nvim".to_string(),
+        "3" => "nano".to_string(),
+        "4" => "emacs".to_string(),
+        "5" => "kate".to_string(),
         "6" => {
             print!("Введи имя редактора: ");
             io::stdout().flush().unwrap();
